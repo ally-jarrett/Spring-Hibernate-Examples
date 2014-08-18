@@ -23,7 +23,11 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+		</dependency>
+
 		<!-- Spring-Framework Artifacts -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -50,10 +54,8 @@
 		</dependency>
 
 		<!-- c3p0 DB Connection Pooling -->
-		<dependency>
-			<groupId>c3p0</groupId>
-			<artifactId>c3p0</artifactId>
-		</dependency>
+		<!-- <dependency> <groupId>c3p0</groupId> <artifactId>c3p0</artifactId> 
+			</dependency> -->
 
 		<!-- Testing -->
 		<dependency>
@@ -71,7 +73,7 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
-		
+
 	</dependencies>
 
 </project>
