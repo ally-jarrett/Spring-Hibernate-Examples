@@ -127,5 +127,6 @@
 
 	<modules>
 		<module>Spring-Hibernate-Simple</module>
+		<module>Spring-Hibernate-Table-Mappings</module>
 	</modules>
 </project>

@@ -12,7 +12,7 @@
 	<tx:annotation-driven />
 	<context:annotation-config />
 
-	<bean id="personDao" class="com.spring.test.dao.PersonDaoImpl" />
+	<bean id="personDao" class="com.spring.test.dao.StockDaoImpl" />
 
 	<!-- HSQLDB datasource -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">

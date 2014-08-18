@@ -10,11 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.test.model.Person;
 
-/**
- * DAO implementation for Person entity
- * 
- * @author DevCrumb.com
- */
 @Transactional(propagation = Propagation.REQUIRED)
 public class PersonDaoImpl {
 

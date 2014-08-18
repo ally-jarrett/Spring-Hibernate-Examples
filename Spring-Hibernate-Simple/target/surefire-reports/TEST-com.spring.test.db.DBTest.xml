@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="1.726" errors="0" skipped="0" tests="3" name="com.spring.test.db.DBTest">
+<testsuite failures="0" time="1.709" errors="0" skipped="0" tests="3" name="com.spring.test.db.DBTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/jre/lib"/>
@@ -64,7 +64,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="1.712" classname="com.spring.test.db.DBTest" name="testASavePerson"/>
+  <testcase time="1.695" classname="com.spring.test.db.DBTest" name="testASavePerson"/>
   <testcase time="0.005" classname="com.spring.test.db.DBTest" name="testBRetrievePerson"/>
   <testcase time="0.009" classname="com.spring.test.db.DBTest" name="testDeletePerson"/>
 </testsuite>
