@@ -1,6 +1,8 @@
 package com.spring.test.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,6 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -31,6 +34,9 @@ public class Stock implements Serializable {
 
 	@OneToOne(fetch = FetchType.LAZY, mappedBy = "stock", cascade = CascadeType.ALL)
 	private StockDetail stockDetail;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "stock")
+	private Set<StockDailyRecord> stockDailyRecords = new HashSet<StockDailyRecord>(0);
 
 	public Stock() {
 	}
@@ -44,6 +50,12 @@ public class Stock implements Serializable {
 		this.stockCode = stockCode;
 		this.stockName = stockName;
 		this.stockDetail = stockDetail;
+	}
+	
+	public Stock(String stockCode, String stockName, Set<StockDailyRecord> stockDailyRecords) {
+		this.stockCode = stockCode;
+		this.stockName = stockName;
+		this.stockDailyRecords = stockDailyRecords;
 	}
 
 	public Integer getStockId() {
@@ -76,6 +88,14 @@ public class Stock implements Serializable {
 
 	public void setStockDetail(StockDetail stockDetail) {
 		this.stockDetail = stockDetail;
+	}
+
+	public Set<StockDailyRecord> getStockDailyRecords() {
+		return stockDailyRecords;
+	}
+
+	public void setStockDailyRecords(Set<StockDailyRecord> stockDailyRecords) {
+		this.stockDailyRecords = stockDailyRecords;
 	}
 
 }

@@ -11,9 +11,10 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.test.model.Stock;
+import com.spring.test.model.StockDailyRecord;
 
 @Transactional(propagation = Propagation.REQUIRED)
-public class StockDaoImpl {
+public class StockDRDaoImpl {
 	
 	@PersistenceContext
 	private EntityManager em;
@@ -22,13 +23,15 @@ public class StockDaoImpl {
 		em.persist(obj);
 	}
 	
-	public List<Stock> getAll() {
-		return em.createQuery("SELECT s FROM Stock s", Stock.class)
+	public List<StockDailyRecord> getAll() {
+		return em.createQuery("SELECT s FROM stock_daily_record s", StockDailyRecord.class)
 				.getResultList();
 	}
 	
-	public Stock retrieveStock(Integer stockID) {
-		return em.find(Stock.class, stockID);
+	public StockDailyRecord retrieveStock(Integer stockID) {
+		//String queryString = "SELECT s FROM stock_daily_record WHERE "
+		//return em.createNamedQuery(arg0);
+		return em.find(StockDailyRecord.class, stockID);
 	}
 	
 	public int rowCount(String table){
